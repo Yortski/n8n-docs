@@ -1,25 +1,14 @@
-# n8n Documentation
+# Welcome to the **n8n Installation Documentation**
+A local n8n installation guide made by Yortski 
 
-![n8n Logo](images/n8n-logo.png)
-
-Welcome to the **n8n documentation site**.
-
-n8n is a **fair-code workflow automation platform** that lets you connect APIs,
-services, and custom logic without writing a full application.
+***
 
 ## What you’ll find here
-- 🚀 Getting started with n8n
-- 🔧 Building workflows
-- 📦 Deployment options
-- 🧠 Best practices
+- Pre-requisites for installing n8n locally on your machine
+- n8n local installation guide (via Node.js)
+- The basics of n8n
+- First challenge: A Resume analysis workflow for cool people!
 
----
+***
 
-## Quick start
-If you just want to try it locally:
-
-```bash
-docker run -it --rm \
-  -p 5678:5678 \
-  n8nio/n8n
-```
+To go to these pages, navigate using the menu on the left side of the screen when on desktop or using the menu button when in mobile.
