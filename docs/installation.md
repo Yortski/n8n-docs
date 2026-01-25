@@ -51,3 +51,65 @@ Please note that the information provided here is based on the documentation fou
     Your activation key will be sent to the email that you have provided earlier. Just copy that key and paste it here.
 
 **That's it! You have successfully self-hosted n8n.**
+
+***
+
+## **Bonus**
+
+We ran n8n by opening a command prompt terminal and typing in **```n8n start```** and either typing o or going to the browser to get into **```localhost:5678```**.
+
+To do this more effectively, we can instead create a batch file that would act as an executable. With this, we will just have to click a single file that would then launch n8n.
+
+To start, let us open up notepad and paste the following
+
+```bash
+@echo off
+setlocal
+
+echo Checking if n8n is already running...
+
+REM Check if n8n is already responding
+powershell -command ^
+  "try { Invoke-WebRequest http://localhost:5678 -UseBasicParsing -TimeoutSec 2 | Out-Null; exit 0 } catch { exit 1 }"
+
+if %errorlevel%==0 (
+    echo n8n is already running.
+    echo Opening browser...
+    start http://localhost:5678
+    echo.
+    echo Press any key to close this window.
+    pause >nul
+    exit /b
+)
+
+echo Starting n8n...
+start cmd /k n8n start
+
+echo Waiting for n8n to be ready...
+
+:waitloop
+powershell -command ^
+  "try { Invoke-WebRequest http://localhost:5678 -UseBasicParsing -TimeoutSec 2 | Out-Null; exit 0 } catch { exit 1 }"
+
+if errorlevel 1 (
+    timeout /t 1 >nul
+    goto waitloop
+)
+
+echo n8n is up! Opening browser...
+start http://localhost:5678
+
+echo.
+echo Press any key to close this window.
+pause >nul
+```
+
+**What this does:**
+- This batch file safely starts n8n only if it is not already running.
+- It prevents multiple n8n instances from starting.
+- It waits until n8n is actually ready before opening the browser.
+- It provides a clean user experience when run multiple times.
+
+After pasting it, we then save the file and set the filename as n8n Launcher.bat. Please note that after saving, the extension type of the file should be .bat for it to work.
+
+**You may now try our n8n shortcut**

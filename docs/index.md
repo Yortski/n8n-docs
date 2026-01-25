@@ -1,9 +1,10 @@
-# Welcome to the **n8n Installation Documentation**
+# Welcome to the **n8n Installation Guide**
 A local n8n installation guide made by Yortski 
 
 ***
 
-## What you’ll find here
+**What you’ll find here**
+
 - Pre-requisites for installing n8n locally on your machine
 - n8n local installation guide (via Node.js)
 - The basics of n8n
