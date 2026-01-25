@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Installation documentation for n8n">
+        <meta name="description" content="Installation Guide for n8n">
       
       
         <meta name="author" content="Yortski">
@@ -27,7 +27,7 @@
     
     
       
-        <title>Installation (Node.js) - n8n Installation Documentation</title>
+        <title>Installation (Node.js) - n8n Installation Guide</title>
       
     
     
@@ -159,7 +159,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="n8n Installation Documentation" class="md-header__button md-logo" aria-label="n8n Installation Documentation" data-md-component="logo">
+    <a href=".." title="n8n Installation Guide" class="md-header__button md-logo" aria-label="n8n Installation Guide" data-md-component="logo">
       
   <img src="../images/yorts.png" alt="logo">
 
@@ -172,7 +172,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            n8n Installation Documentation
+            n8n Installation Guide
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -294,12 +294,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="n8n Installation Documentation" class="md-nav__button md-logo" aria-label="n8n Installation Documentation" data-md-component="logo">
+    <a href=".." title="n8n Installation Guide" class="md-nav__button md-logo" aria-label="n8n Installation Guide" data-md-component="logo">
       
   <img src="../images/yorts.png" alt="logo">
 
     </a>
-    n8n Installation Documentation
+    n8n Installation Guide
   </label>
   
     <div class="md-nav__source">
@@ -447,6 +447,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#bonus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bonus
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -546,6 +557,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#bonus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bonus
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -622,6 +644,58 @@ Please note that the information provided here is based on the documentation fou
 <p>Your activation key will be sent to the email that you have provided earlier. Just copy that key and paste it here.</p>
 </div>
 <p><strong>That's it! You have successfully self-hosted n8n.</strong></p>
+<hr />
+<h2 id="bonus"><strong>Bonus</strong></h2>
+<p>We ran n8n by opening a command prompt terminal and typing in <strong><code>n8n start</code></strong> and either typing o or going to the browser to get into <strong><code>localhost:5678</code></strong>.</p>
+<p>To do this more effectively, we can instead create a batch file that would act as an executable. With this, we will just have to click a single file that would then launch n8n.</p>
+<p>To start, let us open up notepad and paste the following</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>@echo<span class="w"> </span>off
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>setlocal
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="nb">echo</span><span class="w"> </span>Checking<span class="w"> </span><span class="k">if</span><span class="w"> </span>n8n<span class="w"> </span>is<span class="w"> </span>already<span class="w"> </span>running...
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>REM<span class="w"> </span>Check<span class="w"> </span><span class="k">if</span><span class="w"> </span>n8n<span class="w"> </span>is<span class="w"> </span>already<span class="w"> </span>responding
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>powershell<span class="w"> </span>-command<span class="w"> </span>^
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">  </span><span class="s2">&quot;try { Invoke-WebRequest http://localhost:5678 -UseBasicParsing -TimeoutSec 2 | Out-Null; exit 0 } catch { exit 1 }&quot;</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="k">if</span><span class="w"> </span>%errorlevel%<span class="o">==</span><span class="m">0</span><span class="w"> </span><span class="o">(</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span>n8n<span class="w"> </span>is<span class="w"> </span>already<span class="w"> </span>running.
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span>Opening<span class="w"> </span>browser...
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">    </span>start<span class="w"> </span>http://localhost:5678
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">    </span>echo.
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span>Press<span class="w"> </span>any<span class="w"> </span>key<span class="w"> </span>to<span class="w"> </span>close<span class="w"> </span>this<span class="w"> </span>window.
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="w">    </span>pause<span class="w"> </span>&gt;nul
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">    </span><span class="nb">exit</span><span class="w"> </span>/b
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="o">)</span>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="nb">echo</span><span class="w"> </span>Starting<span class="w"> </span>n8n...
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>start<span class="w"> </span>cmd<span class="w"> </span>/k<span class="w"> </span>n8n<span class="w"> </span>start
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="nb">echo</span><span class="w"> </span>Waiting<span class="w"> </span><span class="k">for</span><span class="w"> </span>n8n<span class="w"> </span>to<span class="w"> </span>be<span class="w"> </span>ready...
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>:waitloop
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>powershell<span class="w"> </span>-command<span class="w"> </span>^
+</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a><span class="w">  </span><span class="s2">&quot;try { Invoke-WebRequest http://localhost:5678 -UseBasicParsing -TimeoutSec 2 | Out-Null; exit 0 } catch { exit 1 }&quot;</span>
+</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>
+</span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a><span class="k">if</span><span class="w"> </span>errorlevel<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">(</span>
+</span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a><span class="w">    </span>timeout<span class="w"> </span>/t<span class="w"> </span><span class="m">1</span><span class="w"> </span>&gt;nul
+</span><span id="__span-4-31"><a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a><span class="w">    </span>goto<span class="w"> </span>waitloop
+</span><span id="__span-4-32"><a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a><span class="o">)</span>
+</span><span id="__span-4-33"><a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a>
+</span><span id="__span-4-34"><a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a><span class="nb">echo</span><span class="w"> </span>n8n<span class="w"> </span>is<span class="w"> </span>up!<span class="w"> </span>Opening<span class="w"> </span>browser...
+</span><span id="__span-4-35"><a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a>start<span class="w"> </span>http://localhost:5678
+</span><span id="__span-4-36"><a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a>
+</span><span id="__span-4-37"><a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a>echo.
+</span><span id="__span-4-38"><a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a><span class="nb">echo</span><span class="w"> </span>Press<span class="w"> </span>any<span class="w"> </span>key<span class="w"> </span>to<span class="w"> </span>close<span class="w"> </span>this<span class="w"> </span>window.
+</span><span id="__span-4-39"><a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a>pause<span class="w"> </span>&gt;nul
+</span></code></pre></div>
+<p><strong>What this does:</strong>
+- This batch file safely starts n8n only if it is not already running.
+- It prevents multiple n8n instances from starting.
+- It waits until n8n is actually ready before opening the browser.
+- It provides a clean user experience when run multiple times.</p>
+<p>After pasting it, we then save the file and set the filename as n8n Launcher.bat. Please note that after saving, the extension type of the file should be .bat for it to work.</p>
+<p><strong>You may now try our n8n shortcut</strong></p>
 
 
 
