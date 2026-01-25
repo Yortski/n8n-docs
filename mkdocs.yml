@@ -1,0 +1,43 @@
+site_name: n8n Documentation
+site_description: Internal documentation for n8n workflows and deployment
+site_author: Your Name
+
+repo_name: your-org/n8n-docs
+repo_url: https://github.com/your-org/n8n-docs
+
+theme:
+  name: material
+  logo: images/n8n-logo.png
+  favicon: images/n8n-logo.png
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.expand
+    - navigation.tabs
+    - content.code.copy
+    - content.tabs.link
+  palette:
+    - scheme: default
+      primary: deep purple
+      accent: purple
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.details
+
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
+  - Workflows: workflows.md
+  - Deployment: deployment.md
+
+extra:
+  generator: false
+
+# Helpful for GitHub Codespaces / containers
+dev_addr: 0.0.0.0:8000
