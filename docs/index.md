@@ -7,7 +7,7 @@ A local n8n installation guide made by Yortski
 - Pre-requisites for installing n8n locally on your machine
 - n8n local installation guide (via Node.js)
 - The basics of n8n
-- First challenge: A Resume analysis workflow for cool people!
+<!-- - First challenge: A Resume analysis workflow for cool people!  -->
 
 ***
 
