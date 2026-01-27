@@ -454,6 +454,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#terminal-not-accepting-script-commands-in-progress" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Terminal not accepting script commands (in-progress)
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -619,6 +630,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#terminal-not-accepting-script-commands-in-progress" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Terminal not accepting script commands (in-progress)
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -656,6 +678,11 @@ Within this page is a checklist of what we need to install n8n using Node.js</p>
 <ul>
 <li>Node.js (Yup! That's all we need!)</li>
 </ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Just to explain this bit to the curious, n8n will run using Node's environment, that's why we installed Node.js. </p>
+<p>But to install n8n, we need to have npm or Node's package installation manager. It's like Node's App Store without it being a store.</p>
+</div>
 <hr />
 <h2 id="nodejs-installation"><strong>Node.js Installation</strong></h2>
 <ul>
@@ -727,14 +754,16 @@ Within this page is a checklist of what we need to install n8n using Node.js</p>
 <hr />
 <h2 id="troubleshooting"><strong>Troubleshooting</strong></h2>
 <h3 id="missing-environment-variables">Missing environment variables</h3>
-<p><img alt="npmenverror" src="../images/npmenverror.png" /></p>
+<div class="codehilite"><pre><span></span><code>npm The term &#39;npm&#39; is not recognized as the name of a cmdlet, function, script file, or a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ npm 
++ ~~~
+    + CategoryInfo : ObjectNotFound: (npm: String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+</code></pre></div>
+
 <p>Oh no! You encountered the error above, what do we do now!?</p>
 <p>Don't worry about that. That error only meant that npm was not yet added to your computer's environment variables.</p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>Just to explain this bit to the curious, n8n will run using Node's environment, that's why we installed Node.js. </p>
-<p>But to install n8n, we need to have npm or Node's package installation manager. It's like Node's App Store without it being a store.</p>
-</div>
 <p><strong>Let's get into fixing!</strong></p>
 <ul>
 <li>Press the windows key and search for <strong><code>npm</code></strong></li>
@@ -764,9 +793,18 @@ Within this page is a checklist of what we need to install n8n using Node.js</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>npm<span class="w"> </span>--version
 </span></code></pre></div>
 <p>If it returns a version, it means it worked.</p>
-<hr />
 </li>
 </ul>
+<hr />
+<h3 id="terminal-not-accepting-script-commands-in-progress">Terminal not accepting script commands <strong>(in-progress)</strong></h3>
+<div class="codehilite"><pre><span></span><code><span class="n">npm</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">File</span><span class="w"> </span><span class="n">C</span><span class="p">:</span>\<span class="n">Program</span><span class="w"> </span><span class="n">Files</span>\<span class="n">nodejs</span>\<span class="n">npm</span><span class="o">.</span><span class="n">ps1</span><span class="w"> </span><span class="n">cannot</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">loaded</span><span class="w"> </span><span class="n">because</span><span class="w"> </span><span class="n">running</span><span class="w"> </span><span class="n">scripts</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">disabled</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">system</span><span class="o">.</span><span class="w"> </span><span class="n">For</span>
+<span class="n">more</span><span class="w"> </span><span class="n">information</span><span class="p">,</span><span class="w"> </span><span class="n">see</span><span class="w"> </span><span class="n">about_Execution_Policies</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">https</span><span class="p">:</span><span class="o">/</span><span class="n">go</span><span class="o">.</span><span class="n">microsoft</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">fwlink</span><span class="o">/</span><span class="err">?</span><span class="n">LinkID</span><span class="o">=</span><span class="mf">135170.</span>
+<span class="n">At</span><span class="w"> </span><span class="n">line</span><span class="p">:</span><span class="mi">1</span><span class="w"> </span><span class="nb">char</span><span class="p">:</span><span class="mi">1</span>
+<span class="o">+</span><span class="w"> </span><span class="n">npm</span><span class="w"> </span><span class="o">--</span><span class="n">versionnpx</span>
+<span class="o">+</span><span class="w"> </span><span class="o">~~~</span>
+<span class="w">    </span><span class="o">+</span><span class="w"> </span><span class="n">CategoryInfo</span><span class="w">          </span><span class="p">:</span><span class="w"> </span><span class="n">SecurityError</span><span class="p">:</span><span class="w"> </span><span class="p">(:)</span><span class="w"> </span><span class="p">[],</span><span class="w"> </span><span class="n">PSSecurityException</span>
+<span class="w">    </span><span class="o">+</span><span class="w"> </span><span class="n">FullyQualifiedErrorId</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">UnauthorizedAccess</span>
+</code></pre></div>
 
 
 
