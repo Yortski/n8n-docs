@@ -10,6 +10,11 @@ Within this page is a checklist of what we need to install n8n using Node.js
 ## **Summary of what we need:**
 - Node.js (Yup! That's all we need!)
 
+!!! Info
+    Just to explain this bit to the curious, n8n will run using Node's environment, that's why we installed Node.js. 
+
+    But to install n8n, we need to have npm or Node's package installation manager. It's like Node's App Store without it being a store.
+
 ***
 
 ## **Node.js Installation**
@@ -69,17 +74,16 @@ Within this page is a checklist of what we need to install n8n using Node.js
 ## **Troubleshooting**
 ### Missing environment variables
 
-![npmenverror](images/npmenverror.png)
+    npm The term 'npm' is not recognized as the name of a cmdlet, function, script file, or a path was included, verify that the path is correct and try again.
+    At line:1 char:1
+    + npm 
+    + ~~~
+        + CategoryInfo : ObjectNotFound: (npm: String) [], CommandNotFoundException
+        + FullyQualifiedErrorId : CommandNotFoundException
 
 Oh no! You encountered the error above, what do we do now!?
 
 Don't worry about that. That error only meant that npm was not yet added to your computer's environment variables.
-
-
-!!! Info
-    Just to explain this bit to the curious, n8n will run using Node's environment, that's why we installed Node.js. 
-
-    But to install n8n, we need to have npm or Node's package installation manager. It's like Node's App Store without it being a store.
 
 **Let's get into fixing!**
 
@@ -111,4 +115,16 @@ Don't worry about that. That error only meant that npm was not yet added to your
     ```
 
     If it returns a version, it means it worked.
+
 ***
+
+### Terminal not accepting script commands **(in-progress)**
+
+    
+    npm : File C:\Program Files\nodejs\npm.ps1 cannot be loaded because running scripts is disabled on this system. For
+    more information, see about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170.
+    At line:1 char:1
+    + npm --versionnpx
+    + ~~~
+        + CategoryInfo          : SecurityError: (:) [], PSSecurityException
+        + FullyQualifiedErrorId : UnauthorizedAccess

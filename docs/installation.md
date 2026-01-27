@@ -105,11 +105,12 @@ pause >nul
 ```
 
 **What this does:**
+
 - This batch file safely starts n8n only if it is not already running.
 - It prevents multiple n8n instances from starting.
 - It waits until n8n is actually ready before opening the browser.
 - It provides a clean user experience when run multiple times.
 
-After pasting it, we then save the file and set the filename as n8n Launcher.bat. Please note that after saving, the extension type of the file should be .bat for it to work.
+After pasting it, we then **save the file** and set the **filename** as n8n **```Launcher.bat```**. Please note that after saving, the extension type of the file should be **```.bat```** for it to work.
 
 **You may now try our n8n shortcut**
