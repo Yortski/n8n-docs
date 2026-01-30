@@ -128,3 +128,11 @@ Don't worry about that. That error only meant that npm was not yet added to your
     + ~~~
         + CategoryInfo          : SecurityError: (:) [], PSSecurityException
         + FullyQualifiedErrorId : UnauthorizedAccess
+
+- To fix this, press windows key and type powershell.
+
+- Launch powershell as an administrator
+
+- Then type this command in:
+
+        Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned

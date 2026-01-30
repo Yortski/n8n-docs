@@ -806,6 +806,21 @@ At line:1 char:1
 <span class="w">    </span><span class="o">+</span><span class="w"> </span><span class="n">FullyQualifiedErrorId</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">UnauthorizedAccess</span>
 </code></pre></div>
 
+<ul>
+<li>
+<p>To fix this, press windows key and type powershell.</p>
+</li>
+<li>
+<p>Launch powershell as an administrator</p>
+</li>
+<li>
+<p>Then type this command in:</p>
+<div class="codehilite"><pre><span></span><code>Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+</code></pre></div>
+
+</li>
+</ul>
+
 
 
 
