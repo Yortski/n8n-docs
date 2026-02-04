@@ -51,22 +51,6 @@ Nodes are the building blocks of workflows. Main types include:
 
 ---
 
-## **Adding Credentials**
-Many nodes require authentication to access APIs or services. Steps:
-
-1. Open the node that needs credentials.  
-2. Click **“Credentials”**.  
-3. Choose **existing credentials** or **create new**.  
-4. Enter required details (API key, OAuth token, username/password, etc.).  
-5. Save and test the connection. 
-
-![n8ncredentials1](images/n8ncredentials1.png)
-![n8ncredentials2](images/n8ncredentials2.png)
-
-> n8n securely stores credentials and reuses them across nodes.
-
----
-
 ## **Basic WorkFLOW**
 1. Choose a **trigger** (Webhook, Cron, etc.)  
 2. Connect one or more **action nodes**  

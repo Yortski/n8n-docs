@@ -62,7 +62,7 @@ nav:
   - Prerequisites: prerequisites.md
   - Installation (Node.js): installation.md
   - Basics: basics.md
-  # - First Challenge: firstChallenge.md
+  - Credentials: credentials.md
   - FAQs: faqs.md
 
 extra:
